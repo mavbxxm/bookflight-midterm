@@ -5,7 +5,7 @@
     <div class="container">
         <div class="mb-3">
             <label class="form-label">FullName : </label>
-            <span style="color: red" *ngIf="bookForm.get('fullName')?.errors?.['required']">*required</span>
+            <span style="color: red" *ngIf="bookForm.get('fullName')?.errors?.['required']">required</span>
             <input class="form-control" formControlName="fullName">
 
             <div id="nameHelp" class="form-text">Input your fullname for booking</div>
@@ -15,7 +15,7 @@
             <div class="row">
                 <div class="col">
                     <label class="form-label">From :</label>
-                    <span style="color: red" *ngIf="bookForm.get('from')?.errors?.['required']">*required</span>
+                    <span style="color: red" *ngIf="bookForm.get('from')?.errors?.['required']">required</span>
 
                     <select class="form-select" formControlName="from">
                       <option *ngFor="let city of cFrom" [value]="city">{{city}}</option>
@@ -24,7 +24,7 @@
 
                 <div class="col">
                     <label class="form-label">To :</label>
-                    <span style="color: red" *ngIf="bookForm.get('to')?.errors?.['required']">*required</span>
+                    <span style="color: red" *ngIf="bookForm.get('to')?.errors?.['required']">required</span>
 
                     <select class="form-select" formControlName="to">
                       <option *ngFor="let city of cTo" [value]="city">{{city}}</option>
@@ -37,7 +37,7 @@
 
             <div class="col ">
                 <label class="form-label">Trip Type :</label>
-                <span style="color: red" *ngIf="bookForm.get('type')?.errors?.['required']">*required</span><br/>
+                <span style="color: red" *ngIf="bookForm.get('type')?.errors?.['required']">required</span><br/>
 
                 <div class="form-check">
                     <input class="form-check-input" type="radio" value="One way" formControlName="type">
@@ -56,12 +56,12 @@
             </div>
             <div class="col">
                 <label class="form-label">Depart :</label>
-                <span style="color: red" *ngIf="bookForm.get('departure')?.errors?.['required']">*required</span>
+                <span style="color: red" *ngIf="bookForm.get('departure')?.errors?.['required']">required</span>
                 <input class="form-control" type="date" id="dedate" min="{{StartDate|date:'yyyy-dd-MM'}}" formControlName="departure">
             </div>
             <div class="col">
                 <label class="form-label">Return :</label>
-                <span style="color: red" *ngIf="bookForm.get('type')?.value == 'Return'">*required</span>
+                <span style="color: red" *ngIf="bookForm.get('type')?.value == 'Return'">required</span>
                 <input class="form-control" type="date" min="{{bookForm.get('departure')?.value}}" formControlName="arrival">
             </div>
 
@@ -70,23 +70,23 @@
         <div class="row mb-3">
             <div class="col">
                 <label class="form-label">Adults :</label>
-                <span style="color: red" *ngIf="bookForm.get('adults')?.errors?.['required']">*required</span>
-                <span style="color: red;" *ngIf="bookForm.get('adults')?.errors?.['pattern']"> *number</span>
+                <span style="color: red" *ngIf="bookForm.get('adults')?.errors?.['required']">required</span>
+                <span style="color: red;" *ngIf="bookForm.get('adults')?.errors?.['pattern']">number</span>
                 <span style="color: red" *ngIf="bookForm.get('adults')?.errors?.['max']">*max 99</span>
                 <input class="form-control" type="number" id="adults" formControlName="adults" required />
             </div>
 
             <div class="col">
                 <label class="form-label">Children :</label>
-                <span style="color: red;" *ngIf="bookForm.get('children')?.errors?.['pattern']"> *number</span>
-                <span style="color: red" *ngIf="bookForm.get('children')?.errors?.['max']">*max 99</span>
+                <span style="color: red;" *ngIf="bookForm.get('children')?.errors?.['pattern']">number</span>
+                <span style="color: red" *ngIf="bookForm.get('children')?.errors?.['max']">max 99</span>
                 <input class="form-control" type="number" id="children" formControlName="children" />
             </div>
 
             <div class="col">
                 <label class="form-label">Infants :</label>
-                <span style="color: red;" *ngIf="bookForm.get('infants')?.errors?.['pattern']"> *number</span>
-                <span style="color: red" *ngIf="bookForm.get('infants')?.errors?.['max']">*max 99</span>
+                <span style="color: red;" *ngIf="bookForm.get('infants')?.errors?.['pattern']">number</span>
+                <span style="color: red" *ngIf="bookForm.get('infants')?.errors?.['max']">max 99</span>
                 <input class="form-control" type="number" id="infants" formControlName="infants" />
             </div>
 
