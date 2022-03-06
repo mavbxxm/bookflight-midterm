@@ -31,7 +31,7 @@ export class FlightComponent implements OnInit {
       to: ['', Validators.required],
       type: ['', Validators.required],
       departure: [, Validators.required],
-      arrival: [''],
+      arrival: [],
       adults: [, [Validators.required, Validators.max(99), Validators.pattern("[0-9]*$")]],
       children: [,[Validators.max(99), Validators.pattern("[0-9]*$")]],
       infants: [, [Validators.max(99),Validators.pattern("[0-9]*$")]]
